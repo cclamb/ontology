@@ -1,0 +1,200 @@
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+
+Ontology: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl>
+
+
+Annotations: 
+    rdfs:comment "A pizza ontology taht describes various pizzas based on their toppings."
+
+AnnotationProperty: rdfs:comment
+
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#HamTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MeatTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#JalapenoPepperTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PepperTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SalamiTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MeatTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#VegetableTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PrawnTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SeafoodTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MushroomTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#VegetableTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#Pizza>
+
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#OnionTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#VegetableTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#AnchovyTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SeafoodTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SpicyBeefTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MeatTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PepperoniTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MeatTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#DeepPanBase>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaBase>
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#ThinAndCrispyBase>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MozzarellaTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#CheeseTopping>
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#ParmezanTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#TomatoTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#VegetableTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PepperTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#VegetableTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#GreenPepperTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PepperTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#RedPepperTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PepperTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#TunaTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SeafoodTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MeatTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#ParmezanTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#CheeseTopping>
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MozzarellaTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaTopping>
+
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#CheeseTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaBase>
+
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#ThinAndCrispyBase>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaBase>
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#DeepPanBase>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#CaperTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#VegetableTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SeafoodTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#OliveTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#VegetableTopping>
+    
+    
+DisjointClasses: 
+    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#CheeseTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MeatTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SeafoodTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#VegetableTopping>
+
+DisjointClasses: 
+    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#CaperTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MushroomTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#OliveTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#OnionTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PepperTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#TomatoTopping>
+
+DisjointClasses: 
+    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#HamTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PepperoniTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SalamiTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SpicyBeefTopping>
+
+DisjointClasses: 
+    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#GreenPepperTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#JalapenoPepperTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#RedPepperTopping>
+
+DisjointClasses: 
+    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#AnchovyTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PrawnTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#TunaTopping>
+
+DisjointClasses: 
+    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#Pizza>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaBase>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaTopping>
+
