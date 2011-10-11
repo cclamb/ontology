@@ -2,6 +2,7 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 
@@ -10,10 +11,22 @@ Ontology: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl>
 
 
 Annotations: 
-    rdfs:comment "A pizza ontology taht describes various pizzas based on their toppings."
+    rdfs:comment "A pizza ontology that describes various pizzas based on their toppings."
 
 AnnotationProperty: rdfs:comment
 
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasBase>
+
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasIngredient>
+
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasTopping>
+
+    SubPropertyOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasIngredient>
+    
     
 Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#HamTopping>
 
@@ -27,16 +40,16 @@ Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#JalapenoPepperTop
         <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PepperTopping>
     
     
-Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SalamiTopping>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MeatTopping>
-    
-    
 Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#VegetableTopping>
 
     SubClassOf: 
         <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaTopping>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SalamiTopping>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MeatTopping>
     
     
 Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PrawnTopping>
@@ -96,13 +109,13 @@ Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MozzarellaTopping
         <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#ParmezanTopping>
     
     
-Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#TomatoTopping>
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PepperTopping>
 
     SubClassOf: 
         <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#VegetableTopping>
     
     
-Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PepperTopping>
+Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#TomatoTopping>
 
     SubClassOf: 
         <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#VegetableTopping>
@@ -181,20 +194,20 @@ Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#OliveTopping>
     
     
 DisjointClasses: 
-    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#CheeseTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MeatTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SeafoodTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#VegetableTopping>
+    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#AnchovyTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#OliveTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PrawnTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#TunaTopping>
 
 DisjointClasses: 
     <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#CaperTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MushroomTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#OliveTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#OnionTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PepperTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#TomatoTopping>
 
 DisjointClasses: 
-    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#HamTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PepperoniTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SalamiTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SpicyBeefTopping>
+    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#OliveTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#Pizza>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaBase>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaTopping>
 
 DisjointClasses: 
-    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#GreenPepperTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#JalapenoPepperTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#RedPepperTopping>
+    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#CheeseTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MeatTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#OliveTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SeafoodTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#VegetableTopping>
 
 DisjointClasses: 
-    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#AnchovyTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PrawnTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#TunaTopping>
+    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#HamTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#OliveTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PepperoniTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SalamiTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#SpicyBeefTopping>
 
 DisjointClasses: 
-    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#Pizza>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaBase>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaTopping>
+    <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#GreenPepperTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#JalapenoPepperTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#OliveTopping>,<http://www.semanticweb.org/ontologies/2011/9/pizza.owl#RedPepperTopping>
 
