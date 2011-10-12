@@ -18,15 +18,86 @@ AnnotationProperty: rdfs:comment
     
 ObjectProperty: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasBase>
 
+    SubPropertyOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasIngredient>
+    
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#Pizza>
+    
+    Range: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaBase>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasTopping>,
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#isBaseOf>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#isBaseOf>
+
+    SubPropertyOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasIngredient>
+    
+    Characteristics: 
+        InverseFunctional
+    
+    Domain: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaBase>
+    
+    Range: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#Pizza>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasBase>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#isToppingOf>
+
+    SubPropertyOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasIngredient>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasTopping>
+    
     
 ObjectProperty: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasIngredient>
 
+    Characteristics: 
+        Transitive
+    
+    InverseOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#isIngredientOf>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#isIngredientOf>
+
+    Characteristics: 
+        Transitive
+    
+    InverseOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasIngredient>
+    
     
 ObjectProperty: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasTopping>
 
     SubPropertyOf: 
         <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasIngredient>
     
+    Domain: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#Pizza>
+    
+    Range: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaTopping>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasBase>,
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#isToppingOf>
+    
+    
+Class: owl:Thing
+
     
 Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#HamTopping>
 
@@ -66,6 +137,10 @@ Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#MushroomTopping>
     
 Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#Pizza>
 
+    SubClassOf: 
+        owl:Thing,
+        <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#hasBase> some <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#PizzaBase>
+    
     
 Class: <http://www.semanticweb.org/ontologies/2011/9/pizza.owl#OnionTopping>
 
